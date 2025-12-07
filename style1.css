@@ -1,43 +1,78 @@
-selector {
-  font-family: "Font Name", FallbackFont, generic-family;
+:root{
+  --bg: #4f9d7f;
+  --card: rgba(255,255,255,0.9);
+  --text: #0b2a2a;
+  --accent: #4fc3f7;
 }
 
+*{box-sizing: border-box}
 body{
-    background-color: rgb(79, 157, 127);
-    font-family: "Helvetica Neue", Arial, sans-serif;
+  margin:0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height:1.5;
 }
 
-.relevant{
-    color: rgb(76, 119, 136);
-    font-weight: bold;
+header{
+  background: rgba(255,255,255,0.18);
+  padding: 18px;
+  border-bottom:2px solid rgba(0,0,0,0.2);
+}
+.header-inner{ display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;}
+.header-inner h1{margin:0; font-size:1.6rem;}
+.subtitle{margin:0; opacity:0.9}
+
+.nav-list{ list-style:none; padding:0; margin:12px 0 0 0; display:flex; gap:12px;}
+.nav-list a{ text-decoration:none; padding:6px 8px; border-radius:6px; background:transparent;}
+.nav-list a:hover{ background: rgba(255,255,255,0.25)}
+
+.saudacao{ font-weight:700; font-size:1.1rem; margin-top:10px; opacity:0; animation:fadeIn 1.5s forwards;}
+
+.layout{
+  display:grid;
+  grid-template-columns: 280px 1fr;
+  gap:20px;
+  padding:20px;
+  align-items:start;
 }
 
-footer{
-    text-align: right;
+@media (max-width:800px){
+  .layout{ grid-template-columns: 1fr; }
 }
+
+.sidebar{ background:var(--card); padding:14px; border-radius:10px; box-shadow: 0 4px 10px rgba(0,0,0,0.08);}
+
+.content, .single-col{ background:var(--card); padding:18px; border-radius:10px; box-shadow: 0 4px 10px rgba(0,0,0,0.08);}
+
+.project-list{ display:flex; gap:12px; flex-wrap:wrap; margin-top:10px; }
+.project-card{ background: white; padding:12px; border-radius:8px; min-width:200px; box-shadow:0 3px 8px rgba(0,0,0,0.05); }
+.project-card h3{margin-top:0}
+
+.modal{ display:none; position:fixed; inset:0; align-items:center; justify-content:center; background:rgba(0,0,0,0.45); }
+.modal[aria-hidden="false"]{ display:flex; }
+.modal-content{ background:white; padding:20px; border-radius:8px; max-width:720px; width:90%; position:relative; }
+#modalClose{ position:absolute; right:10px; top:8px; background:transparent; border:0; font-size:1.1rem; cursor:pointer; }
+
+footer{ padding:12px 20px; text-align:right; background: rgba(255,255,255,0.12); }
+
+@keyframes fadeIn{ from{opacity:0; transform: translateY(6px)} to{opacity:1; transform:none} }
+
+button{ cursor:pointer; padding:8px 12px; border-radius:8px; border:0; background:var(--accent); color:#fff; }
+.btn-details{ background:transparent; border:1px solid rgba(0,0,0,0.08); color:var(--text); padding:6px 10px; }
 
 #first-paragraph::first-letter{
-    text-transform: capitalize;
-    font-weight: bolder;
-    font-size: 50px;
-    color: deeppink;
-}
-#saudacao {
-    font-size: 26px;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 15px;
-    width: 100%;
-    border-right: 3px solid black;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: typing 3s steps(40), blink .6s infinite alternate;
+  font-size:40px; font-weight:700; color:deeppink; text-transform:capitalize;
 }
 
-@keyframes typing {
-    from { width: 0; }
+body.dark{
+  --bg: #1e2933;
+  --card: rgba(255,255,255,0.06);
+  --text: #e6eef2;
+  --accent: #ffb86b;
 }
 
 @keyframes blink {
     50% { border-color: transparent; }
 }
+
