@@ -1,0 +1,43 @@
+selector {
+  font-family: "Font Name", FallbackFont, generic-family;
+}
+
+body{
+    background-color: rgb(79, 157, 127);
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.relevant{
+    color: rgb(76, 119, 136);
+    font-weight: bold;
+}
+
+footer{
+    text-align: right;
+}
+
+#first-paragraph::first-letter{
+    text-transform: capitalize;
+    font-weight: bolder;
+    font-size: 50px;
+    color: deeppink;
+}
+#saudacao {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+    width: 100%;
+    border-right: 3px solid black;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(40), blink .6s infinite alternate;
+}
+
+@keyframes typing {
+    from { width: 0; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
