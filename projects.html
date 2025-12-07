@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projetos — Arthur Vitorino</title>
+  <link rel="stylesheet" href="style1.css" />
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1>Projetos</h1>
+    </div>
+
+    <nav aria-label="Menu principal">
+      <ul class="nav-list">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="about.html">Sobre</a></li>
+        <li><a href="projects.html">Projetos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="single-col">
+    <section aria-labelledby="proj1">
+      <h2 id="proj1">Projeto I — Quiz Corrida (ESG)</h2>
+      <p>Descrição curta: quiz onde cada acerto move o carro do jogador. Objetivo: conscientizar sobre meio ambiente.</p>
+
+      <div class="project-list">
+        <article class="project-card">
+          <h3>Quiz Corrida (protótipo)</h3>
+          <p>Um protótipo com interação de volante e placar de acertos.</p>
+          <button class="btn-details" data-proj="proj-quiz">Ver detalhes</button>
+        </article>
+
+        <article class="project-card">
+          <h3>Site-portfolio</h3>
+          <p>Este portfólio com HTML/CSS/JS e navegação simples.</p>
+          <button class="btn-details" data-proj="proj-portfolio">Ver detalhes</button>
+        </article>
+      </div>
+    </section>
+
+    <div id="projectModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="modal-content">
+        <button id="modalClose" aria-label="Fechar">✖</button>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 — Arthur Vitorino</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
