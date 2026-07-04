@@ -15,17 +15,28 @@ if (saudacaoElement) {
     saudacaoElement.textContent = saudacao;
 }
 
-// Theme Toggle Logic
+// Theme Toggle Logic com LocalStorage
 const themeToggleBtn = document.getElementById("themeToggle");
+
+// 1. Verifica se o usuário já tinha escolhido o tema escuro antes
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+    if (themeToggleBtn) themeToggleBtn.textContent = "Modo Claro";
+}
+
+// 2. Lógica do clique no botão
 if (themeToggleBtn) {
     themeToggleBtn.addEventListener("click", () => {
         document.body.classList.toggle("dark");
         
-        // Opcional: muda o texto do botão para dar feedback visual
         if (document.body.classList.contains("dark")) {
             themeToggleBtn.textContent = "Modo Claro";
+            // Salva a escolha no navegador
+            localStorage.setItem("theme", "dark");
         } else {
             themeToggleBtn.textContent = "Modo Escuro";
+            // Remove a escolha do navegador
+            localStorage.setItem("theme", "light");
         }
     });
 }

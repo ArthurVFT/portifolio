@@ -10,6 +10,8 @@
   <header>
     <div class="header-inner">
       <h1>Projetos</h1>
+      <div class="header-actions">
+        <button id="themeToggle" aria-label="Alternar tema">Tema</button>
     </div>
 
     <nav aria-label="Menu principal">
@@ -28,12 +30,19 @@
 
       <div class="project-list">
         <article class="project-card">
-          <h3>Quiz Corrida (protótipo)</h3>
+          <h3>Quiz Corrida QuizzRace</h3>
           <p>Este projeto está sendo desenvolvido para a disciplina Projeto 1 do Bacharelado em Ciência da Computação na CESAR School e encontra-se atualmente na reta final de implementação. A iniciativa busca promover conscientização sobre transporte responsável e impacto ambiental por meio de uma experiência educativa e interativa.
               A proposta utiliza um sistema físico construído com Arduino, composto por um volante com três tipos de comandos: giro para a direita, giro para a esquerda e um botão central. Cada ação corresponde a uma alternativa no jogo de perguntas e respostas sobre mobilidade sustentável.
               A dinâmica é competitiva e envolve dois jogadores simultâneos. A cada resposta correta, um carrinho físico avança em direção à linha de chegada, tornando o processo de aprendizado mais visual, dinâmico e envolvente. Mesmo em desenvolvimento, o projeto já demonstra grande potencial para integrar tecnologia, gamificação e educação ambiental em um único produto..</p>
         </article>
-
+      <div class="project-list"></div>
+        <article class="project-card">
+          <h3>Projeto de Interface Humano Computador - IHC</h3>
+          <p>A Gekkoteca foi um projeto que não só trouxe muito aprendizando em questão de euristicas de Nilsen, acessibilidade, prevenção de erros e muito mais.
+          Ele surgiu do da ideia de quebrar o monopólio de livrarias tradicionais, permitindo mais destaque para livrarias de medio e pequeno porte, dando nao só
+          a opção de comprar os livros como também alugar.             
+          </p>
+        </article>
         <article class="project-card">
           <h3>Site-portfolio</h3>
           <p>Este portfólio com HTML/CSS/JS e navegação simples.</p>
@@ -43,7 +52,6 @@
 
     <div id="projectModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
       <div class="modal-content">
-        <button id="modalClose" aria-label="Fechar">✖</button>
         <div id="modalBody"></div>
       </div>
     </div>
