@@ -1,24 +1,25 @@
 :root {
-  --bg: #f0f7f4;
-  --card: #ffffff;
-  --text: #1e352f;
-  --accent: #2d6a4f;
-  --accent-hover: #1b4332;
-  --border: #d8e2dc;
+  --bg: #f0f4f8;           /* Fundo claro mais puxado pro cinza/azul */
+  --card: #ffffff;         /* Fundo dos cards (branco) */
+  --text: #0f172a;         /* Texto escuro (azul marinho quase preto) */
+  --accent: #2563eb;       /* Azul vibrante principal */
+  --accent-hover: #1d4ed8; /* Azul um pouco mais escuro para o hover do botão */
+  --border: #cbd5e1;       /* Bordas acinzentadas/azuladas */
   --header-bg: rgba(255, 255, 255, 0.8);
   --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 body.dark {
-  --bg: #121c18;
-  --card: #1b2a24;
-  --text: #e8f5e9;
-  --accent: #52b788;
-  --accent-hover: #74c69d;
-  --border: #2d4038;
-  --header-bg: rgba(27, 42, 36, 0.8);
+  --bg: #0f172a;           /* Fundo escuro azulado (slate) */
+  --card: #1e293b;         /* Fundo dos cards escuro */
+  --text: #f8fafc;         /* Texto claro */
+  --accent: #3b82f6;       /* Azul claro/brilhante para destacar no fundo escuro */
+  --accent-hover: #60a5fa; /* Azul ainda mais claro no hover */
+  --border: #334155;       /* Borda sutil no modo escuro */
+  --header-bg: rgba(15, 23, 42, 0.8);
   --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
+
 
 * {
   box-sizing: border-box;
